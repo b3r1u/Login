@@ -24,12 +24,10 @@
     width: 200px;
     padding: 15px;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
+    display: none; 
     margin: auto;
-    margin-top: 350px;
+    margin-top: 350px; 
     background-color: #8cd0ed;
-    position: fixed;
 }
 
 /* Estilização componentes de input */
@@ -41,6 +39,7 @@
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border: none;
+    width: 150px;
 }
 
 #in, #up {
@@ -52,7 +51,12 @@
     border-radius: 5px;
 }
 
-#in, #up:hover {
+#in:hover {
+    width: 80px;
+    transition: .5s;
+}
+
+#up:hover {
     width: 80px;
     transition: .5s;
 }
