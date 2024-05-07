@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização da div com os inputs */
+
+.box {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 350px;
+    background-color: #8cd0ed;
+}
+
+.box_add {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 350px;
+    background-color: #8cd0ed;
+    display: none;
+}
+
+/* Estilização componentes de input */
+
+#userIn,
+#passIn {
+    margin: 8px; 
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border: none;
+    width: 160px;
+}
+#userUp,
+#passUp {
+    margin: 8px; 
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border: none;
+    width: 160px;
+}
+
+#in, #up {
+    width: 70px;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#in, #up:hover {
+    width: 80px;
+    transition: .5s;
+}
+
+.add {
+    display: flex;
+    flex-direction: column;
+}
+
+#add{
+    width: 70px;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.popIn {
+    color: #fff;
+    background-color: #51ddaa;
+    width: 320px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    margin: auto;
+    margin-top: 350px;
+    display: none;
+}  
+
+.dontIn {
+    color: #fff;
+    background-color: #ee7272;
+    width: 320px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    margin: auto;
+    margin-top: 350px;
+    display: none;
+} 
