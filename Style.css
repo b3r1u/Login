@@ -1,34 +1,43 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(17, 13, 35);
+}
+
+H1{
+    color: #fff;
 }
 
 /* Estilização da div com os inputs */
 
 .box {
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 200px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 350px;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     margin: auto;
     margin-top: 350px;
-    background-color: #8cd0ed;
+    background-color: #282828;
 }
 
 .box_add {
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 200px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 350px;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     margin: auto;
     margin-top: 350px;
-    background-color: #8cd0ed;
+    background-color: #282828;
     display: none;
 }
 
@@ -41,25 +50,41 @@
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border: none;
-    width: 160px;
+    width: 300px;
+    border-radius: 8px;
+    background-color: #282828;
 }
-#userUp,
+
+
+input {
+    border: .2px solid #0a52e1;
+    outline: 2px solid #0a52e1;
+    color: #fff;
+}
+
+#userUp,    
 #passUp {
     margin: 8px; 
     padding: 10px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border: none;
-    width: 160px;
+    width: 300px;
+    border-radius: 8px;
+    background-color: #282828;
 }
 
 #in, #up {
     width: 70px;
     margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 10px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    background-color: #0a52e1;
+    color: #fff;
 }
 
 #in, #up:hover {
@@ -70,6 +95,7 @@
 .add {
     display: flex;
     flex-direction: column;
+    
 }
 
 #add{
@@ -79,15 +105,17 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 25px;
+    background-color: #0a52e1;
+    color: #fff;
 }
 
 /* popups */
 
 .popIn {
     color: #fff;
-    background-color: #51ddaa;
-    width: 320px;
+    background-color: #282828;
+    width: 420px;
     height: 50px;
     padding: 10px;
     border-radius: 10px;
@@ -101,7 +129,7 @@
 
 .dontIn {
     color: #fff;
-    background-color: #ee7272;
+    background-color: #282828;
     width: 320px;
     height: 50px;
     padding: 10px;
@@ -116,7 +144,7 @@
 
 .userName {
     color: #fff;
-    background-color: #ee7272;
+    background-color: #282828;
     width: 320px;
     height: 70px;
     padding: 10px;
@@ -132,7 +160,7 @@
 
 .nullFields {
     color: #fff;
-    background-color: #ee7272;
+    background-color: #282828;
     width: 320px;
     height: 70px;
     padding: 10px;
