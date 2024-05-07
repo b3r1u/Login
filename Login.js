@@ -20,39 +20,79 @@ buttonAdd.addEventListener('click', function() {
 
 //Logic for login
 
+let users = [
+    {user: 'berio@gmail.com', pass: '123456'}
+];
+
 function getUser() {
 
-    //Box fields
-    const user = document.getElementById('userIn').value;
-    const pass = document.getElementById('passIn').value;
+    const style = window.getComputedStyle(boxIn)
 
-    let users = [
-        {user: 'berio@gmail.com', pass: '123456'}
-    ];
+    if(style.display !== 'none') {
 
-    for (let i = 0; i < users.length; i++) {
-
-        if(user.value != '' && pass.value != ''){
-
-            if(users[i].user === user && users[i].pass === pass) {
-                boxIn.style.display = 'none';
-                buttonAdd.style.display = 'none'
-                popIn.style.display = 'block'
-                return;
+        //Box fields
+        const user = document.getElementById('userIn').value;
+        const pass = document.getElementById('passIn').value;
+    
+    
+        for (let i = 0; i < users.length; i++) {
+    
+            if(user != '' && pass != ''){
+    
+                const userExist = users.find(u => u.user === user && u.pass === pass);
+                if(userExist) {
+                    boxIn.style.display = 'none';
+                    buttonAdd.style.display = 'none'
+                    popIn.style.display = 'block'
+                    return;
+                }
             }
+            boxIn.style.display = 'none';
+            buttonAdd.style.display = 'none'
+            dontIn.style.display = 'block'
+            return;
         }
-        alert('Preencha todos os campos!')
-        return;
-    }
+        
+    } else {
 
-    boxIn.style.display = 'none';
-    buttonAdd.style.display = 'none'
-    dontIn.style.display = 'block'
+    }
+}
+
+//logic for Register
+
+function addUser() {
+
+        const userUp = document.getElementById('userUp').value;
+        const passUp = document.getElementById('passUp').value;
+    
+        if(userUp != '' && passUp != '') {
+    
+            const existUser = users.find(u => u.user === userUp);
+    
+            if (existUser) {
+    
+                alert('Usuário ja existe. Por favor, escolha outro nome de usuário')
+            } else {
+    
+                users.push({ user: userUp, pass: passUp });
+                alert('Usuário cadastrado com sucesso!')
+                boxUp.style.display = 'none';
+                buttonAdd.style.display = 'block';
+                boxIn.style.display = 'block';
+            }
+        } else {
+            alert('Preencha todos os campos de Cadastro!')
+        }
 }
 
 buttonIn.addEventListener('click', function() {
     getUser();
 })
+
+buttonUp.addEventListener('click', function() {
+    addUser();
+
+})  
 
 
 
