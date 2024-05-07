@@ -29,18 +29,28 @@
     margin: auto;
     margin-top: 350px;
     background-color: #8cd0ed;
-    position: fixed;
+    display: none;
 }
 
 /* Estilização componentes de input */
 
-#user,
-#pass {
+#userIn,
+#passIn {
     margin: 8px; 
     padding: 10px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border: none;
+    width: 160px;
+}
+#userUp,
+#passUp {
+    margin: 8px; 
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border: none;
+    width: 160px;
 }
 
 #in, #up {
@@ -71,3 +81,33 @@
     cursor: pointer;
     margin-top: 10px;
 }
+
+.popIn {
+    color: #fff;
+    background-color: #51ddaa;
+    width: 320px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    margin: auto;
+    margin-top: 350px;
+    display: none;
+}  
+
+.dontIn {
+    color: #fff;
+    background-color: #ee7272;
+    width: 320px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    margin: auto;
+    margin-top: 350px;
+    display: none;
+} 
