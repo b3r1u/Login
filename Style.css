@@ -82,6 +82,8 @@
     margin-top: 10px;
 }
 
+/* popups */
+
 .popIn {
     color: #fff;
     background-color: #51ddaa;
@@ -111,3 +113,35 @@
     margin-top: 350px;
     display: none;
 } 
+
+.userName {
+    color: #fff;
+    background-color: #ee7272;
+    width: 320px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    margin-top: 200px;
+    display: none;
+    position: absolute;
+    margin-left: 41.5%;
+} 
+
+.nullFields {
+    color: #fff;
+    background-color: #ee7272;
+    width: 320px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    margin-top: 200px;
+    display: none;
+    position: absolute;
+    margin-left: 41.5%;
+}
