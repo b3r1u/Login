@@ -60,6 +60,29 @@ function getUser() {
 
 //logic for Register
 
+//Saving at LocalStorage
+
+function saveDataLocalStorage() {
+    const usersString = JSON.stringify(users);
+
+    localStorage.setItem('users', usersString);
+}
+
+//Function to load the dates of localStorage
+
+function loadDataFromLocalStorage() {
+    const usersString = localStorage.getItem('users');
+
+    if(usersString) {
+        users = JSON.parse(usersString);
+    }
+}
+
+//Loading the dates from localStorage when de the page get load
+window.addEventListener('load', function() {
+    loadDataFromLocalStorage();
+})
+
 function addUser() {
 
         const userUp = document.getElementById('userUp').value;
@@ -72,14 +95,19 @@ function addUser() {
             if (existUser) {
     
                 alert('Usuário ja existe. Por favor, escolha outro nome de usuário')
+
             } else {
     
                 users.push({ user: userUp, pass: passUp });
                 alert('Usuário cadastrado com sucesso!')
+
+                saveDataLocalStorage();
+
                 boxUp.style.display = 'none';
                 buttonAdd.style.display = 'block';
                 boxIn.style.display = 'block';
             }
+
         } else {
             alert('Preencha todos os campos de Cadastro!')
         }
