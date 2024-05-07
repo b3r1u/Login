@@ -13,6 +13,7 @@ const dontIn = document.querySelector('.dontIn');
 
 //Hidig Boxs
 buttonAdd.addEventListener('click', function() {
+    dontIn.style.display = 'none'
     boxIn.style.display = 'none';
     buttonAdd.style.display = 'none';
     boxUp.style.display = 'block'
@@ -48,7 +49,7 @@ function getUser() {
                 }
             }
             boxIn.style.display = 'none';
-            buttonAdd.style.display = 'none'
+            // buttonAdd.style.display = 'none'
             dontIn.style.display = 'block'
             return;
         }
@@ -93,13 +94,13 @@ function addUser() {
             const existUser = users.find(u => u.user === userUp);
     
             if (existUser) {
-    
-                alert('Usuário ja existe. Por favor, escolha outro nome de usuário')
+
+                const userName = document.querySelector('.userName');
+                userName.style.display = 'block'
 
             } else {
     
                 users.push({ user: userUp, pass: passUp });
-                alert('Usuário cadastrado com sucesso!')
 
                 saveDataLocalStorage();
 
@@ -109,7 +110,8 @@ function addUser() {
             }
 
         } else {
-            alert('Preencha todos os campos de Cadastro!')
+            const nullFields = document.querySelector('.nullFields');
+            nullFields.style.display = 'block'
         }
 }
 
