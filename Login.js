@@ -1,17 +1,14 @@
-//Box de inputs
+
 const boxIn = document.querySelector('.box');
 const boxUp = document.querySelector('.box_add');
 
-//Botões das box 
 const buttonIn = document.querySelector('#in');
 const buttonAdd = document.querySelector('#add')
 const buttonUp = document.querySelector('#up')
 
-//PopUps
 const popIn = document.querySelector('.popIn');
 const dontIn = document.querySelector('.dontIn');
 
-//Hidig Boxs
 buttonAdd.addEventListener('click', function() {
     dontIn.style.display = 'none'
     boxIn.style.display = 'none';
@@ -19,7 +16,7 @@ buttonAdd.addEventListener('click', function() {
     boxUp.style.display = 'block'
 })
 
-//Logic for login
+
 
 let users = [
     {user: 'berio@gmail.com', pass: '123456'}
@@ -31,7 +28,6 @@ function getUser() {
 
     if(style.display !== 'none') {
 
-        //Box fields
         const user = document.getElementById('userIn').value;
         const pass = document.getElementById('passIn').value;
     
@@ -49,7 +45,6 @@ function getUser() {
                 }
             }
             boxIn.style.display = 'none';
-            // buttonAdd.style.display = 'none'
             dontIn.style.display = 'block'
             return;
         }
@@ -59,17 +54,11 @@ function getUser() {
     }
 }
 
-//logic for Register
-
-//Saving at LocalStorage
-
 function saveDataLocalStorage() {
     const usersString = JSON.stringify(users);
 
     localStorage.setItem('users', usersString);
 }
-
-//Function to load the dates of localStorage
 
 function loadDataFromLocalStorage() {
     const usersString = localStorage.getItem('users');
@@ -79,7 +68,6 @@ function loadDataFromLocalStorage() {
     }
 }
 
-//Loading the dates from localStorage when de the page get load
 window.addEventListener('load', function() {
     loadDataFromLocalStorage();
 })
