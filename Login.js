@@ -32,12 +32,17 @@ function getUser() {
 
     for (let i = 0; i < users.length; i++) {
 
-        if(users[i].user === user && users[i].pass === pass) {
-            boxIn.style.display = 'none';
-            buttonAdd.style.display = 'none'
-            popIn.style.display = 'block'
-            return;
+        if(user.value != '' && pass.value != ''){
+
+            if(users[i].user === user && users[i].pass === pass) {
+                boxIn.style.display = 'none';
+                buttonAdd.style.display = 'none'
+                popIn.style.display = 'block'
+                return;
+            }
         }
+        alert('Preencha todos os campos!')
+        return;
     }
 
     boxIn.style.display = 'none';
