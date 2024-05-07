@@ -1,1 +1,1 @@
-console.log('Git Flow! Testando main');
+console.log('Git Flow!');
