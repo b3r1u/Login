@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização da div com os inputs */
+
+.box {
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px;
+    background-color: #8cd0ed;
+}
+
+/* Estilização componentes de input */
+
+#user,
+#pass {
+    margin: 8px; 
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border: none;
+}
+
+#into {
+    width: 70px;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#into:hover {
+    width: 80px;
+    transition: .5s;
+}
